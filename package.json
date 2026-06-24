@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "node --enable-source-maps dist/index.js",
+    "migrate": "node --enable-source-maps dist/migrate.js",
+    "start": "npm run migrate && node --enable-source-maps dist/index.js",
     "build": "tsc",
     "dev": "tsx src/index.ts"
   },
@@ -20,3 +21,4 @@
     "typescript": "^5.0.0"
   }
 }
+
